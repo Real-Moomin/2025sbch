@@ -1,0 +1,79 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); 
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* 버튼 스타일 */
+.sound-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 100%;  /* 버튼의 가로 크기를 그리드 너비에 맞춤 */
+    aspect-ratio: 1 / 1; /* 정사각형 비율 */
+    font-size: 1.5rem;
+    border-radius: 12px; /* 둥근 모서리 */
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px #2e7d32;
+    user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 #2e7d32;
+}
+
+/* 버튼 색상 변경 */
+.sound-button:nth-child(1) { background-color: #FF5733; } /* 주황색 */
+.sound-button:nth-child(2) { background-color: #33B5FF; } /* 파란색 */
+.sound-button:nth-child(3) { background-color: #8E44AD; } /* 보라색 */
+.sound-button:nth-child(4) { background-color: #FFC300; } /* 노란색 */
+.sound-button:nth-child(5) { background-color: #C70039; } /* 빨간색 */
+.sound-button:nth-child(6) { background-color: #1ABC9C; } /* 청록색 */
+.sound-button:nth-child(7) { background-color: #3498DB; } /* 연파랑 */
+.sound-button:nth-child(8) { background-color: #E74C3C; } /* 다홍색 */
+.sound-button:nth-child(9) { background-color: #F39C12; } /* 오렌지 */
+.sound-button:nth-child(10) { background-color: #2ECC71; } /* 녹색 */
+
+.sound-button:hover {
+    filter: brightness(1.1);
+}
+
+@media (max-width: 600px) {
+    .sound-button {
+        font-size: 1rem;
+    }
+}
